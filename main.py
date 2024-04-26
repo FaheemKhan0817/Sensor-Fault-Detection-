@@ -1,9 +1,11 @@
 from sensor.exception import SensorException
 import sys
 import os
+from sensor.logger import logging
 
 def test_exception():
     try:
+        logging.info("This is a info message")
         a = 1 / 0
     except Exception as e:
         raise SensorException(e, sys)
